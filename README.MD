@@ -39,8 +39,8 @@ image.src = src;
 
 ## Demo
 
-You can see a demo of `trim-canvas-blank` [here](https://newsning.github.io/trim-canvas-blank/).
-
+You can see a demo of `trim-canvas-blank` [here](https://newsning.github.io/trim-canvas-blank/).  
+or [codesandbox](https://codesandbox.io/s/trim-canvas-blank-demo-75gep).
 
 ## Thanks Repo
 
