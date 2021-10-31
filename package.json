@@ -1,0 +1,27 @@
+{
+  "name": "trim-canvas-2",
+  "version": "1.0.0",
+  "main": "lib/bundle.cjs.js",
+  "module": "lib/bundle.esm.js",
+  "browser": "lib/bundle.browser.js",
+  "types": "types",
+  "license": "MIT",
+  "keywords": [
+    "canvas",
+    "trim",
+    "trim canvas",
+    "remove",
+    "remove blanks"
+  ],
+  "scripts": {
+    "start": "rm -rf ./lib && rollup -c -w",
+    "build": "rm -rf ./lib && rollup -c",
+    "build:types": "tsc"
+  },
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^8.3.0",
+    "rollup": "^2.58.3",
+    "tslib": "^2.3.1",
+    "typescript": "^4.4.4"
+  }
+}
