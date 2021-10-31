@@ -1,11 +1,17 @@
 {
-  "name": "trim-canvas-2",
+  "name": "trim-canvas-blank",
+  "description": "A lightweight library for trim canvas blank.",
   "version": "1.0.0",
   "main": "lib/bundle.cjs.js",
   "module": "lib/bundle.esm.js",
   "browser": "lib/bundle.browser.js",
   "types": "types",
   "license": "MIT",
+  "author": "NewsNIng",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NewsNIng/trim-canvas-blank"
+  },
   "keywords": [
     "canvas",
     "trim",

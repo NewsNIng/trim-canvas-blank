@@ -1,0 +1,53 @@
+<html>
+
+<head>
+    <title>Demo</title>
+</head>
+
+<body>
+
+    <canvas style="width: 500; height: 300; outline: 1px red solid;" width="500" height="300"></canvas>
+    <div style="margin: 12px;">
+        padding: <input id="paddingInput" type="number" value="12" style="width: 60px;" max="100" />
+
+        <button id="trimBtn">trim</button>
+        <button id="clearBtn">clear</button>
+
+    </div>
+    <img id="output" style="outline: 1px green solid;" />
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/signature_pad@2.3.2/dist/signature_pad.min.js"></script>
+    <script src="https://unpkg.com/browse/trim-canvas-blank@1.0.0/lib/bundle.browser.js"></script>
+
+    <script>
+
+        var canvas = document.querySelector("canvas");
+
+        var signaturePad = new SignaturePad(canvas);
+
+        trimBtn.onclick = function () {
+            const paddingValue = parseInt(paddingInput.value);
+            const padding = Math.min(isNaN(paddingValue) ? 0 : paddingValue, +paddingInput.max);
+            paddingInput.value = padding;
+
+            const outputCanvas = trimCanvas(canvas, {
+                padding, // all
+                // padding: [24, 12, 24, 12], // [top, right, bottom, left]
+            });
+            
+            const src = outputCanvas.toDataURL("image/png")
+            output.src = src;
+        }
+
+        clearBtn.onclick = function () {
+            signaturePad.clear();
+            output.removeAttribute("src");
+        }
+
+
+    </script>
+</body>
+
+</html>
